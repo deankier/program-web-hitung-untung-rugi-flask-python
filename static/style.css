@@ -1,0 +1,252 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 1200px;
+    background-color: rgb(63, 67, 69);
+}
+
+/* index.html */
+.containerNav{
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 13px;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0 5px 6px 0 rgb(20, 20, 20);
+}
+
+.brand{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+    padding: 13px;
+    text-transform: capitalize;
+}.brand>a{
+    text-decoration: none;
+}
+.program{
+    color: white;
+    font-weight: 700 ;
+}
+.untung{
+    color: limegreen;
+    font-weight: 700;
+}
+.rugi{
+    color: rgb(192, 37, 37);
+    font-weight: 700;
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation>li{
+    list-style-type: none;
+    padding: 15px;
+}
+.navigation>li>a{
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navigation>li>a:hover{
+    color: limegreen;
+    transition: all .2s ease-in-out;
+}
+
+.active{
+    background-color: limegreen;
+    border-radius: 5px;
+    border-color: limegreen;
+    color: white;
+    padding: 10px;
+}
+
+.active:hover{
+    color: white !important;
+}
+
+.containerForm{
+    position: relative;
+    top: 60px;
+    margin: auto;
+    width: 95%;
+    height: 95;
+    background-color: rgb(20, 20, 20);
+    border-radius: 5px;
+    box-shadow: 0 5px 6px 0 rgb(20, 20, 20);
+    padding: 15px;
+}
+
+.containerForm .btn{
+    color: gb(20, 20, 20);
+    background-color: white;
+    border-radius: 5px;
+    border: 1px rgb(20, 20, 20);
+    padding: 9px 25px;
+    position: relative;
+    top: 80px;
+    box-shadow: 0 5px 6px 0 rgb(20, 20, 20);
+}
+.btn:hover{
+    padding: 10px 26px;
+    box-shadow: none;
+    transition: .1s ease-in-out;
+}
+
+.containerForm form .user-input{
+    display: flex;
+    position: relative;
+    padding: 15px;
+    bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .user-input .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+.user-input .input-box .details{
+    display: block;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.user-input .input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1.2px solid rgb(20, 20, 20);
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 3px;
+    transition: all .3s ease-in-out;
+}
+
+.user-input .input-box input:focus{
+    border-color: limegreen;
+}
+
+.containerHasil{
+    color: white;
+    position: relative;
+    top: 150px;
+    margin-left: 100px;
+}
+.containerHasil .judul{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.containerHasil .nama{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}.containerHasil .nama .left{
+    margin-right: 5px;
+}
+
+.containerHasil .rincian{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-top: 2px;
+}.containerHasil .rincian .left{
+    margin-right: 5px;
+}
+
+.containerHasil .modal{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-top: 2px;
+}.containerHasil .modal .left{
+    margin-right: 124px;
+}
+
+.containerHasil .biaya{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-top: 2px;
+}.containerHasil .biaya .left{
+    margin-right: 15px;
+}
+
+.containerHasil .penjualan{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-top: 2px;
+}.containerHasil .penjualan .left{
+    margin-right: 27px;
+}
+
+.containerHasil .kotor{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-top: 2px;
+}.containerHasil .kotor .left{
+    margin-right: 17px;
+}
+
+.containerHasil .bersih{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-top: 2px;
+}.containerHasil .bersih .left{
+    margin-right: 8px;
+}.containerHasil .bersih .right{
+    margin-right: 8px;
+}
+
+.containerHasil .untung{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-top: 10px;
+}.containerHasil .untung .left{
+    margin-right: 5px;
+}
+.containerHasil .apa{
+    margin-top: 50px;
+    margin-left: 35%;
+}
+.containerHasil .apa .ulang{
+    color: white;
+    font-weight: 700;
+}.containerHasil .apa .ulang:hover{
+    color: limegreen;
+}
+
+/* Panduan.html */
+.panduan>h3{
+    color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.panduan>ol{
+    color: white;
+    margin-left: 80px;
+    margin-top: 10px;
+}

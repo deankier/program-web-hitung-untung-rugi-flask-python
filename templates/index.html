@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Program Untung Rugi</title>
+</head>
+<body>
+    <div class="container">
+        <div class="containerNav">
+            <nav class="wrapper">
+                <div class="brand">
+                    <div class="program">program</div>
+                    <div class="untung">untung</div>
+                    <div class="rugi">rugi</div>
+                </div>
+                <ul class="navigation">
+                    <li><a href="http://127.0.0.1:5000/panduan">panduan</a></li>
+                    <li><a href="http://127.0.0.1:5000/tentang">tentang</a></li>
+                </ul>
+            </nav> 
+        </div>
+        <div class="containerForm">
+            <form name="passdata" action="http://127.0.0.1:5000/#hasil" method="post">
+                <div class="user-input">
+                    <div class="input-box">
+                        <span class="details">Nama Usaha</span>
+                        <input type="text" name="nama" placeholder="Nama usaha anda">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Bulan</span>
+                        <input type="text" name="bulan" placeholder="Periode bulan yang dihitung ">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Modal</span>
+                        <input type="number" name="modal" placeholder="Modal yang dipakai pada satu bulan">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Biaya Operasional</span>
+                        <input type="number" name="biaya" placeholder="Biaya yang digunakan untuk keperluan usaha">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Penjualan Bersih</span>
+                        <input type="number" name="penjualan" placeholder="Total uang yang masuk dari hasil penjualan">
+                    </div>
+                    <a href="http://127.0.0.1:5000/#hasil">
+                        <button type="submit" class="btn"> Hitung</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+        
+        <div id="hasil" class="containerHasil" style="visibility : hidden;">
+            <span id="modall" style="display : none;">{{md}}</span>
+            <script>
+                var md= document.getElementById("modall").innerHTML;
+                if(md > 0){
+                    document.getElementById("hasil").style.visibility = "visible"
+                }
+            </script>
+            <p class="judul">Hasil Taksiran Untung dan Rugi Usaha Anda</p>
+            <div class="nama">
+                <p class="left">Nama Usaha </p>
+                <p class="right">: {{nm}}</p>
+            </div>
+            <div class="rincian">
+                <p class="left">Rincian Usaha Anda dalam Periode Bulan</p>
+                <p class="right">{{rin}}</p>
+            </div>
+            <div class="modal">
+                <p class="left">Modal</p>
+                <p class="right">: Rp {{md}}</p>
+            </div>
+            <div class="biaya">
+                <p class="left">Biaya Operasional</p>
+                <p class="right">: Rp {{biy}}</p>
+            </div>
+            <div class="penjualan">
+                <p class="left">Penjualan Bersih</p>
+                <p class="right">: Rp {{pen}}</p>
+            </div>
+            <div class="kotor">
+                <p class="left">Keuntungan Kotor</p>
+                <p class="right">: Rp {{ktr}}</p>
+            </div>
+            <div class="bersih">
+                <span id="untung" style="display : none;">{{brs}}</span>
+                <script>
+                    var un = document.getElementById("untung").innerHTML;
+                    if(un > 0){
+                        document.write("<p class='left'>Keuntungan Bersih</p>")
+                        document.write("<p class='right' style='color: limegreen;'>: Rp {{brs}}</p>")
+                    }
+                    else {
+                        document.write("<p class='left'>Keuntungan Bersih</p>")
+                        document.write("<p class='right' style='color: red;'>: Rp {{brs}}</p>")
+                    }
+                    
+                </script>
+            </div>
+            <div class="untung">
+                <span id="persen" style="display : none;">{{prs}}</span>
+                <script>
+                    var pnl = document.getElementById("persen").innerHTML;
+                    if (pnl > 0){
+                        document.write("<p class='left' style='color: white;'>{{PnL}}</p>")
+                        document.write("<p class='right' style='color: limegreen;'>▲ {{prs}}%</p>")
+                    }
+                    else {
+                        document.write("<p class='left' style='color: white;'>{{PnL}}</p>")
+                        document.write("<p class='right' style='color: red;'>▼ {{prs}}%</p>")
+                    }
+                </script>
+            </div>
+            <div class="apa">
+                <a class="ulang" href="http://127.0.0.1:5000/">Hitung Ulang</a>
+            </div>
+        </div>
+        
+    </div>
+     
+</body>
+</html>
